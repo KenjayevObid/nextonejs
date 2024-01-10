@@ -3,7 +3,7 @@
 
 import { Button } from 'flowbite-react';
 
-export default function Component() {
+export default function Logout() {
   return (
     <div className="flex flex-wrap gap-2">
       <Button.Group>
