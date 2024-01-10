@@ -1,26 +1,73 @@
 
 'use client';
 
-import { Button } from 'flowbite-react';
+import { Checkbox, Table } from 'flowbite-react';
 
 export default function Logout() {
   return (
-    <div className="flex flex-wrap gap-2">
-      <Button.Group>
-        <Button color="info">Profile</Button>
-        <Button color="info">Settings</Button>
-        <Button color="info">Messages</Button>
-      </Button.Group>
-      <Button.Group>
-        <Button gradientMonochrome="info">Profile</Button>
-        <Button gradientMonochrome="info">Settings</Button>
-        <Button gradientMonochrome="info">Messages</Button>
-      </Button.Group>
-      <Button.Group>
-        <Button gradientDuoTone="greenToBlue">Profile</Button>
-        <Button gradientDuoTone="greenToBlue">Settings</Button>
-        <Button gradientDuoTone="greenToBlue">Messages</Button>
-      </Button.Group>
+    <div className="overflow-x-auto">
+      <Table hoverable>
+        <Table.Head>
+          <Table.HeadCell className="p-4">
+            <Checkbox />
+          </Table.HeadCell>
+          <Table.HeadCell>Product name</Table.HeadCell>
+          <Table.HeadCell>Color</Table.HeadCell>
+          <Table.HeadCell>Category</Table.HeadCell>
+          <Table.HeadCell>Price</Table.HeadCell>
+          <Table.HeadCell>
+            <span className="sr-only">Edit</span>
+          </Table.HeadCell>
+        </Table.Head>
+        <Table.Body className="divide-y">
+          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+            <Table.Cell className="p-4">
+              <Checkbox />
+            </Table.Cell>
+            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+              {'Apple MacBook Pro 17"'}
+            </Table.Cell>
+            <Table.Cell>Sliver</Table.Cell>
+            <Table.Cell>Laptop</Table.Cell>
+            <Table.Cell>$2999</Table.Cell>
+            <Table.Cell>
+              <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
+                Edit
+              </a>
+            </Table.Cell>
+          </Table.Row>
+          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+            <Table.Cell className="p-4">
+              <Checkbox />
+            </Table.Cell>
+            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+              Microsoft Surface Pro
+            </Table.Cell>
+            <Table.Cell>White</Table.Cell>
+            <Table.Cell>Laptop PC</Table.Cell>
+            <Table.Cell>$1999</Table.Cell>
+            <Table.Cell>
+              <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
+                Edit
+              </a>
+            </Table.Cell>
+          </Table.Row>
+          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+            <Table.Cell className="p-4">
+              <Checkbox />
+            </Table.Cell>
+            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">Magic Mouse 2</Table.Cell>
+            <Table.Cell>Black</Table.Cell>
+            <Table.Cell>Accessories</Table.Cell>
+            <Table.Cell>$99</Table.Cell>
+            <Table.Cell>
+              <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
+                Edit
+              </a>
+            </Table.Cell>
+          </Table.Row>
+        </Table.Body>
+      </Table>
     </div>
   );
 }

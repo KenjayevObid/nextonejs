@@ -17,10 +17,10 @@ const NavTop = () => {
       <Navbar.Brand as={Link} href="https://flowbite-react.com">
         <Image src={img} alt="Picture of the author" width={100} />
       </Navbar.Brand>
-      <Navbar.Toggle />
       <Flowbite>
         <DarkThemeToggle />
       </Flowbite>
+      <Navbar.Toggle />
       <Navbar.Collapse>
         {link.map((item) => (
           <Navbar.Link key={item.id} href={item.href}>
