@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import { DarkThemeToggle, Navbar, Flowbite } from "flowbite-react";
 import img from "../imegs/logo.png";
+import { UserButton } from "@clerk/nextjs";
 const NavTop = () => {
   const link = [
     { id: 1, href: "/", title: "Home", active: false },
@@ -27,6 +28,7 @@ const NavTop = () => {
             {item.title}
           </Navbar.Link>
         ))}
+         <UserButton afterSignOutUrl="/"/>
           <Navbar.Link  href="/logout">Logout</Navbar.Link>
 
       </Navbar.Collapse>
