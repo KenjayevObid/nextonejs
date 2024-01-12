@@ -5,6 +5,7 @@ import { Button, Checkbox, Label, TextInput } from 'flowbite-react';
 import Link from 'next/link';
 
 function Contact() {
+  
   return (
     <form className="flex max-w-md flex-col gap-4">
       <div>
