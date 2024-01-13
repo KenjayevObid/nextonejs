@@ -1,10 +1,10 @@
 
-import { SignIn } from "@clerk/nextjs";
+
 
 const signIn = () => {
   return (
     <div>
-      <SignIn />
+     <h1>Login in</h1>
     </div>
   );
 };
